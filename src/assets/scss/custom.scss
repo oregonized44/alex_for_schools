@@ -1,0 +1,266 @@
+#lander{
+  position: relative;
+  overflow: hidden;
+  max-height: 680px;
+  .title{
+    position:absolute;
+    left:4%;
+    top:17%;
+    h1 {
+      font-size: 7.95rem;
+      border-left: thick solid #fed167;
+      margin:0;
+      padding-left: 5px;
+      padding-right: 5px
+    }
+    h3 {
+      border-left: thick solid #fed167;
+      margin:0;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    p{
+      padding-left: 10px;
+    }
+  }
+  .statement{
+    background-color: $white;
+    position:absolute;
+    left:48%;
+    top:62%;
+    @media screen and (min-width: 40em) and (max-width: 64em) {
+      display: none;
+    }
+    h3{
+      margin:0;
+    }
+    .quote{
+      color:#fed167;
+      padding:1px;
+    }
+  }
+  .picture{
+    overflow: hidden;
+    position:absolute;
+    border-radius: 50%;
+    height:100px;
+    width:100px;
+    left:74%;
+    top:68%;
+    padding-bottom:25px;
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      display: none;
+    }
+
+  }
+}
+@media #{medium only}{
+  .picture{
+    display:none;
+  }
+}
+#for-position{
+  background-color:#fed167;
+  padding-top: 1rem;
+  padding-bottom:2rem;
+  h2{
+      text-transform: uppercase;
+      border-left: thick solid  #292c2f;
+      color: #292c2f;
+      padding-left:1rem;
+      margin-bottom:2rem;
+  }
+  .card{
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+#bio{
+  position: relative;
+  margin:3.5rem;
+  .bio-image{
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+      height:auto;
+      width: auto;
+    }
+  }
+}
+.main-navigation{
+  background-color: #292c2f;
+  position:sticky;
+}
+.menu{
+  > li {
+    &.hover {
+      background-color:#292c2f;
+
+      a{
+        color:#292c2f;
+      }
+    }
+    > a {
+      color:$white;
+      font-weight: bold;
+      text-transform: uppercase;
+      justify-content: space-around;
+    }
+  }
+}
+div.responsive-menu{
+  padding: rem-calc(10);
+  .menu-icon{
+    @include hamburger($white, $white, 40px, 30px, 5px, 3);
+  }
+  .title-bar-title{
+    color:$white;
+    margin-left:rem-calc(20);
+  }
+}
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+
+.card{
+  text-align: center;
+  .card-section{
+    padding: 0px 30px 0px 30px;
+  }
+}
+
+#hello{
+  text-align:center;
+}
+
+#for-education{
+  background-color:#292c2f;
+  color:$white;
+  padding-top: 2rem;
+  padding-bottom:2rem;
+  a{
+    color: #fed167;
+  }
+
+
+}
+.hero {
+  background: url('http://www.banksy-wallpaper.com/wallpapers/800x600/10-i-am-father.jpg') no-repeat center center;
+	background-size: cover;
+  height: 50vh;
+  overflow: hidden;
+  h1, h2 {
+    color: #292c2f;
+    text-shadow: 1px 1px 1px #000;
+    padding: 1rem 0 0 1rem;
+    margin: 0;
+  }
+}
+
+.row {
+  max-width: 1200px;
+}
+
+.footer {
+  background-color: #fed167;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+
+  .inline-list a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 3px 0 0;
+  }
+
+  .contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    color: #292c2f;
+
+    li {
+      margin-bottom: 2rem;
+
+      p {
+        padding-left: 5rem;
+      }
+    }
+
+    i {
+      position: absolute;
+      background-color: #33383b;
+      color: #fff;
+      font-size: 2rem;
+      border-radius: 50%;
+      line-height: 1;
+      margin: 0 0 0 -4rem;
+      vertical-align: middle;
+      padding: .25em .45em;
+    }
+  }
+
+  .copywrite {
+    color: #292c2f;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .about {
+    color: #292c2f;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #292c2f;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+
+    p {
+      text-align: left;
+    }
+
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+
+    .contact {
+      text-align: left;
+      > i {
+        margin-right: 1rem;
+      }
+    }
+
+  }
+}
+
+.logo {
+  color: #292c2f;
+  font-size: 1.5rem;
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
